@@ -184,9 +184,6 @@ open class Session: URLSession {
     }
 
     private func persist(_ interactions: [Interaction]) {
-        defer {
-            abort()
-        }
 
         // Create directory
         let outputDirectory = (self.outputDirectory as NSString).expandingTildeInPath
